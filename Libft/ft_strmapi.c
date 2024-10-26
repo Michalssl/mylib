@@ -33,3 +33,17 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	}
 	return (r);
 }
+
+// char fts_toupper(unsigned int index,char c) {
+// 	if (c >= 'a' && c <= 'z')
+// 	{
+// 		c = c -32 ;
+// 	}
+// 	return (c);
+// }
+// int main ()
+// {
+// 	char r[]= "hello";
+
+// 	printf("%s\n",ft_strmapi(r,fts_toupper));
+// }

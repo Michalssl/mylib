@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: melkhatr <melkhatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/25 17:13:23 by melkhatr          #+#    #+#             */
-/*   Updated: 2024/10/26 13:13:48 by melkhatr         ###   ########.fr       */
+/*   Created: 2024/10/26 16:06:16 by melkhatr          #+#    #+#             */
+/*   Updated: 2024/10/26 16:07:28 by melkhatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+t_list *ft_lstnew(void *content)
 {
-	char	*s2;
-
-	s2 = (char *)malloc(ft_strlen(s1) + 1);
-	if (!s2)
-		return (0);
-	ft_memcpy(s2, s1, ft_strlen(s1) + 1);
-	return (s2);
+ 
 }
-
-// int main()
-// {
-// 	char f[]= "hello";
-// 	printf("%s",ft_strdup(f));
-// }

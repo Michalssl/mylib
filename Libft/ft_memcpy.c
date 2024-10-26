@@ -6,7 +6,7 @@
 /*   By: melkhatr <melkhatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 16:39:21 by melkhatr          #+#    #+#             */
-/*   Updated: 2024/10/25 11:41:41 by melkhatr         ###   ########.fr       */
+/*   Updated: 2024/10/26 11:51:15 by melkhatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,10 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
+// int main()
+// {
+// 	char d[3]= "";
+// 	char s[] = "hello";
+// 	printf("%s\n",memcpy(d,s,2));
+// 	printf("%s\n",ft_memcpy(d,s,2));
+// }

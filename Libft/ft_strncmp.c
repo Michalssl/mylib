@@ -6,7 +6,7 @@
 /*   By: melkhatr <melkhatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 10:47:34 by melkhatr          #+#    #+#             */
-/*   Updated: 2024/10/25 13:39:46 by melkhatr         ###   ########.fr       */
+/*   Updated: 2024/10/26 14:34:47 by melkhatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,10 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return ((unsigned char)(s1[i]) - (unsigned char)(s2[i]));
 }
+
+// int main ()
+// {
+// 	char r[]= "hello";
+// 	char f[]="hello";
+// 	printf("%u",ft_strncmp(r,f,2));
+// }

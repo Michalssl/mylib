@@ -6,7 +6,7 @@
 /*   By: melkhatr <melkhatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 16:39:27 by melkhatr          #+#    #+#             */
-/*   Updated: 2024/10/25 11:07:08 by melkhatr         ###   ########.fr       */
+/*   Updated: 2024/10/26 15:06:37 by melkhatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,11 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 }
 
-/*int	main(void)
-{
-	char bi[] = {'h', 'g', 'a', 'a', 'a', 'a'}; // h h g a a a
-	char c[] = {'a', 'a', 'a', 'a', 'a', 'a'};
+// int main ()
+// {
+// 	char r[]= "helcccccclo";
+// 	char s[] = "worlddd";
+// 	printf("%s\n",ft_memmove(r,s,5));
+// 		printf("%s\n",memmove(r,s,5));
 
-	ft_memmove(c + 2, bi, 4);
-	//ft_memset(bi,'b',4);
-
-	printf("%s \n", c);
-	//    printf("%s \n",bi);
-}*/
+// }

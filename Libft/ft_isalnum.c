@@ -6,7 +6,7 @@
 /*   By: melkhatr <melkhatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 17:19:50 by melkhatr          #+#    #+#             */
-/*   Updated: 2024/10/22 12:16:30 by melkhatr         ###   ########.fr       */
+/*   Updated: 2024/10/26 15:29:53 by melkhatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-	if ((c >= 48 || c <= 57) || (c >= 65 && c <= 90) || (c >= 97 || c <= 122))
-	{
-		return (1);
-	}
-	return (0);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

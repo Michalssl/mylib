@@ -6,7 +6,7 @@
 /*   By: melkhatr <melkhatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 16:39:24 by melkhatr          #+#    #+#             */
-/*   Updated: 2024/10/22 16:44:03 by melkhatr         ###   ########.fr       */
+/*   Updated: 2024/10/26 11:47:07 by melkhatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+
+// int main ()
+// {
+// 	char r[]= "hello";
+// 	char f[]="hello";
+// 	printf("%d\n",ft_memcmp(r,f,5));
+// 	printf("%d\n",memcmp(r,f,5));
+
+// }

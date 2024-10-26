@@ -6,7 +6,7 @@
 /*   By: melkhatr <melkhatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 14:14:24 by melkhatr          #+#    #+#             */
-/*   Updated: 2024/10/24 13:48:23 by melkhatr         ###   ########.fr       */
+/*   Updated: 2024/10/26 15:04:17 by melkhatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,35 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*w;
-	size_t	l;
-	size_t	f;
+	char	*ns;
+	size_t	i;
+	size_t	j;
 
+	i = 0;
+	j = 0;
 	if (!s)
 	{
-		return (0);
+		return (NULL);
 	}
-	f = 0;
-	l = ft_strlen(s);
-	if (start < l)
+	ns = (char *)malloc(len + 1);
+	if (!ns)
 	{
-		f = l - start;
+		return (NULL);
 	}
-	if (start > l)
+	if (start >= ft_strlen(s))
 	{
-		f = len;
+		return (ns);
 	}
-	w = (char *)malloc(sizeof(char) * (f + 1));
-	if (!w)
+	while (i < len && s[start + i])
 	{
-		return (0);
+		ns[j++] = s[start + i++];
 	}
-	ft_strlcpy(w, s + start, f + 1);
-	return (w);
+	ns[j] = '\0';
+	return (ns);
 }
+
+// int main()
+// {
+// 	char r[] = "hello";
+// 	printf("%s",ft_substr(r,2,15));
+// }

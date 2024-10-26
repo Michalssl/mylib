@@ -6,7 +6,7 @@
 /*   By: melkhatr <melkhatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 14:16:34 by melkhatr          #+#    #+#             */
-/*   Updated: 2024/10/25 16:11:47 by melkhatr         ###   ########.fr       */
+/*   Updated: 2024/10/26 14:48:57 by melkhatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,10 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
+// int main ()
+// {
+// 	char r[]= "hello";
+// 	char f[]= "l";
+
+// 	printf("%s",ft_strnstr(r,f,3));
+// }

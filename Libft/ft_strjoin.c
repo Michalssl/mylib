@@ -6,7 +6,7 @@
 /*   By: melkhatr <melkhatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 14:40:07 by melkhatr          #+#    #+#             */
-/*   Updated: 2024/10/25 14:11:57 by melkhatr         ###   ########.fr       */
+/*   Updated: 2024/10/26 14:11:11 by melkhatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcpy(result + len1, s2, len2 + 1);
 	return (result);
 }
+// int main()
+// {
+// 	char r[] = "hello";
+// 	char b[] = "world";
+// 	printf("%s\n",ft_strjoin(r,b));
+// }
