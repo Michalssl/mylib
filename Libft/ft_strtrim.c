@@ -6,19 +6,18 @@
 /*   By: melkhatr <melkhatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 16:25:43 by melkhatr          #+#    #+#             */
-/*   Updated: 2024/10/27 15:01:06 by melkhatr         ###   ########.fr       */
+/*   Updated: 2024/10/27 16:07:28 by melkhatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;
 	size_t	end;
 	size_t	len;
-	char	*trimmed;
+	char	*t;
 
 	if (!s1 || !set)
 		return (NULL);
@@ -29,10 +28,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (end > start && strchr(set, s1[end - 1]))
 		end--;
 	len = end - start;
-	trimmed = malloc(len + 1);
-	if (!trimmed)
+	t = malloc(len + 1);
+	if (!t)
 		return (NULL);
-	strncpy(trimmed, s1 + start, len);
-	trimmed[len] = '\0';
-	return (trimmed);
+	strncpy(t, s1 + start, len);
+	t[len] = '\0';
+	return (t);
 }

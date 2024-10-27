@@ -6,7 +6,7 @@
 /*   By: melkhatr <melkhatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 11:29:41 by melkhatr          #+#    #+#             */
-/*   Updated: 2024/10/27 15:47:31 by melkhatr         ###   ########.fr       */
+/*   Updated: 2024/10/27 18:20:41 by melkhatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@
 
 typedef struct s_list
 {
-	void			*content;
-	struct s_list	*next;
-}					t_list;
+void *content;
+struct s_list *next;
+} t_list;
 
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
@@ -61,5 +61,14 @@ void				*ft_memset(void *s, int c, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
 char				*ft_strrchr(const char *s, int c);
 int					ft_atoi(const char *str);
+
+//// 
+void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+t_list	*ft_lstlast(t_list *lst);
+t_list *ft_lstnew(void *content);
+
+
+
 
 #endif

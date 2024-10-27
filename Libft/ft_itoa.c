@@ -6,7 +6,7 @@
 /*   By: melkhatr <melkhatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:50:42 by melkhatr          #+#    #+#             */
-/*   Updated: 2024/10/25 13:58:24 by melkhatr         ###   ########.fr       */
+/*   Updated: 2024/10/27 16:03:41 by melkhatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,12 @@ char	*ft_itoa(int n)
 	{
 		str[0] = '0';
 	}
+	size = size - 1;
 	while (nbr > 0)
 	{
-		str[--size] = (nbr % 10) + '0';
+		str[size] = (nbr % 10) + '0';
 		nbr /= 10;
+		size--;
 	}
 	return (str);
 }

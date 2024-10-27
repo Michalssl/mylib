@@ -6,7 +6,7 @@
 /*   By: melkhatr <melkhatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 17:06:19 by melkhatr          #+#    #+#             */
-/*   Updated: 2024/10/27 15:52:23 by melkhatr         ###   ########.fr       */
+/*   Updated: 2024/10/27 15:58:03 by melkhatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,3 +22,22 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(array, (nmemb * size));
 	return (array);
 }
+
+// int main()
+// {
+//     void *ptr = calloc(5, sizeof(int));
+//     if (ptr == NULL)
+//     {
+//       return (0);
+//     }
+
+//     printf("memory: %p\n", ptr);
+
+//     int i = 0;
+//     while (i < 5)
+//     {
+//         printf("%d: %d\n", i, ((int *)ptr)[i]);
+//         i++;
+//     }
+//     return (0);
+// }

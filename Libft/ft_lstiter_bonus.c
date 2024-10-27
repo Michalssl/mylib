@@ -1,38 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: melkhatr <melkhatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 16:39:29 by melkhatr          #+#    #+#             */
-/*   Updated: 2024/10/27 16:05:22 by melkhatr         ###   ########.fr       */
+/*   Created: 2024/10/27 18:29:25 by melkhatr          #+#    #+#             */
+/*   Updated: 2024/10/27 18:36:35 by melkhatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	unsigned char	*o;
-	size_t			i;
-
-	if (!s)
-		return (NULL);
-	o = (unsigned char *)s;
-	i = 0;
-	while (i < n)
+	if (!lst || !f)
+		return ;
+	while (lst)
 	{
-		o[i] = (unsigned char)c;
-		i++;
+		f(lst->content);
+		lst = lst->next;
 	}
-	return (s);
 }
-// int main ()
-// {
-// 	char d[] = "hellow";
-// 		char s[] = "hellow";
-// 	printf("%s\n",ft_memset(d,'e',5));
-// 		printf("%s\n",memset(s,'e',5));
-
-// }

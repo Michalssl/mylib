@@ -6,7 +6,7 @@
 /*   By: melkhatr <melkhatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 14:01:12 by melkhatr          #+#    #+#             */
-/*   Updated: 2024/10/26 14:19:40 by melkhatr         ###   ########.fr       */
+/*   Updated: 2024/10/27 16:39:58 by melkhatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,16 +40,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[j] = 0;
 	return (e + r);
 }
-// int main() {
-//     char f[20] = "hello";
-//     char g[] = "world";
-
-//     size_t result = ft_strlcat(f, g, 20);
-//     printf("%s\n", f);
-//     printf("%u\n", result);
-// 				char s[20] = "hello";
-//     char j[] = "world";
-// 				size_t result1 = strlcat(s,j,20);
-//     printf("%u\n",result1);
-//     return (0);
-// }
