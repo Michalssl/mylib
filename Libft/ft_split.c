@@ -6,7 +6,7 @@
 /*   By: melkhatr <melkhatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 18:01:58 by melkhatr          #+#    #+#             */
-/*   Updated: 2024/10/26 17:18:41 by melkhatr         ###   ########.fr       */
+/*   Updated: 2024/10/27 15:49:39 by melkhatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,19 @@
 static int	count_words(const char *str, char c)
 {
 	int	i;
-	int	trigger;
+	int	t;
 
 	i = 0;
-	trigger = 0;
+	t = 0;
 	while (*str)
 	{
-		if (*str != c && trigger == 0)
+		if (*str != c && t == 0)
 		{
-			trigger = 1;
+			t = 1;
 			i++;
 		}
 		else if (*str == c)
-			trigger = 0;
+			t = 0;
 		str++;
 	}
 	return (i);
@@ -50,25 +50,41 @@ char	**ft_split(char const *s, char c)
 {
 	size_t	i;
 	size_t	j;
-	int		index;
+	int		in;
 	char	**split;
 
-	if (!s || !(split = malloc((count_words(s, c) + 1) * sizeof(char *))))
+	split = malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (!s || !split)
 		return (0);
 	i = 0;
 	j = 0;
-	index = -1;
+	in = -1;
 	while (i <= ft_strlen(s))
 	{
-		if (s[i] != c && index < 0)
-			index = i;
-		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
+		if (s[i] != c && in < 0)
+			in = i;
+		else if ((s[i] == c || i == ft_strlen(s)) && in >= 0)
 		{
-			split[j++] = word_dup(s, index, i);
-			index = -1;
+			split[j++] = word_dup(s, in, i);
+			in = -1;
 		}
 		i++;
 	}
 	split[j] = 0;
 	return (split);
+}
+
+void	free_split(char **split)
+{
+	int	i;
+
+	if (!split)
+		return ;
+	i = 0;
+	while (split[i])
+	{
+		free(split[i]);
+		i++;
+	}
+	free(split);
 }
