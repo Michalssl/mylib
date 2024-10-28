@@ -6,61 +6,70 @@
 /*   By: melkhatr <melkhatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:50:42 by melkhatr          #+#    #+#             */
-/*   Updated: 2024/10/27 16:03:41 by melkhatr         ###   ########.fr       */
+/*   Updated: 2024/10/28 13:34:17 by melkhatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	d_count(long int i)
+static int	ft_digit_count(long int i)
 {
-	int	c;
+	int	count;
 
-	c = 0;
-	if (i == 0)
-	{
-		return (1);
-	}
+	count = 0;
 	if (i < 0)
 	{
-		c = 1;
-		i = -i;
+		i *= -1;
+		count++;
 	}
-	while (i != 0)
+	if (i == 0)
+		return (1);
+	while (i > 0)
 	{
 		i /= 10;
-		c++;
+		count++;
 	}
-	return (c);
+	return (count);
+}
+
+static char	*create_itoa_string(int n)
+{
+	int		length;
+	char	*str;
+
+	length = ft_digit_count(n);
+	str = malloc((length + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
+	str[length] = '\0';
+	return (str);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	long	nbr;
-	size_t	size;
+	char		*str;
+	long int	nb;
+	int			i;
 
-	nbr = (long)n;
-	size = d_count(nbr);
-	str = (char *)malloc(size + 1);
+	nb = n;
+	str = create_itoa_string(nb);
 	if (!str)
 		return (NULL);
-	str[size] = '\0';
-	if (nbr < 0)
-	{
-		str[0] = '-';
-		nbr = -nbr;
-	}
-	else if (nbr == 0)
+	if (nb == 0)
 	{
 		str[0] = '0';
+		return (str);
 	}
-	size = size - 1;
-	while (nbr > 0)
+	if (nb < 0)
 	{
-		str[size] = (nbr % 10) + '0';
-		nbr /= 10;
-		size--;
+		str[0] = '-';
+		nb = -nb;
+	}
+	i = ft_digit_count(n) - 1;
+	while (nb > 0)
+	{
+		str[i--] = (nb % 10) + '0';
+		nb /= 10;
 	}
 	return (str);
 }
