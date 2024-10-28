@@ -6,7 +6,7 @@
 /*   By: melkhatr <melkhatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 17:06:19 by melkhatr          #+#    #+#             */
-/*   Updated: 2024/10/27 15:58:03 by melkhatr         ###   ########.fr       */
+/*   Updated: 2024/10/28 17:40:12 by melkhatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	void	*array;
+	void	*a;
 
-	array = (void *)malloc(nmemb * size);
-	if (array == NULL)
+	a = (void *)malloc(nmemb * size);
+	if (a == NULL)
 		return (NULL);
-	ft_bzero(array, (nmemb * size));
-	return (array);
+	ft_bzero(a, (nmemb * size));
+	return (a);
 }
 
 // int main()

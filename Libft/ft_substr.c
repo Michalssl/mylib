@@ -6,7 +6,7 @@
 /*   By: melkhatr <melkhatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 14:14:24 by melkhatr          #+#    #+#             */
-/*   Updated: 2024/10/27 14:50:33 by melkhatr         ###   ########.fr       */
+/*   Updated: 2024/10/28 17:19:23 by melkhatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 // int main()
 // {
 // 	char r[] = "hello";
-// 	printf("%s",ft_substr(r,2,15));
+// 	printf("%s",ft_substr(r,2,2));
 // }

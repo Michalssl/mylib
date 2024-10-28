@@ -6,7 +6,7 @@
 /*   By: melkhatr <melkhatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:50:42 by melkhatr          #+#    #+#             */
-/*   Updated: 2024/10/28 13:34:17 by melkhatr         ###   ########.fr       */
+/*   Updated: 2024/10/28 17:22:23 by melkhatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int	ft_digit_count(long int i)
 	return (count);
 }
 
-static char	*create_itoa_string(int n)
+static char	*alloc_str(int n)
 {
 	int		length;
 	char	*str;
@@ -52,7 +52,7 @@ char	*ft_itoa(int n)
 	int			i;
 
 	nb = n;
-	str = create_itoa_string(nb);
+	str = alloc_str(nb);
 	if (!str)
 		return (NULL);
 	if (nb == 0)

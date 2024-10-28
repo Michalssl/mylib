@@ -20,7 +20,7 @@ OBJSALL = ${SRCSALL:.c=.o}
 
 LIB = libft.a
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra -I ./
+CFLAGS = -Wall -Werror -Wextra
 
 %.o: %.c
 	${CC} ${CFLAGS} -c $< -o $@

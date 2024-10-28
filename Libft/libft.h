@@ -6,7 +6,7 @@
 /*   By: melkhatr <melkhatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 11:29:41 by melkhatr          #+#    #+#             */
-/*   Updated: 2024/10/28 11:42:10 by melkhatr         ###   ########.fr       */
+/*   Updated: 2024/10/28 20:21:52 by melkhatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,6 @@ void				*ft_memset(void *s, int c, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
 char				*ft_strrchr(const char *s, int c);
 int					ft_atoi(const char *str);
-
-////
 void				ft_lstadd_front(t_list **lst, t_list *new);
 t_list				*ft_lstlast(t_list *lst);
 t_list				*ft_lstnew(void *content);
