@@ -6,14 +6,14 @@
 /*   By: melkhatr <melkhatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 17:47:18 by melkhatr          #+#    #+#             */
-/*   Updated: 2024/11/15 10:49:41 by melkhatr         ###   ########.fr       */
+/*   Updated: 2024/11/17 10:57:20 by melkhatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 0
+#  define BUFFER_SIZE 45
 # endif
 # include <fcntl.h>
 # include <stdio.h>

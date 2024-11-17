@@ -6,7 +6,7 @@
 /*   By: melkhatr <melkhatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 18:31:57 by melkhatr          #+#    #+#             */
-/*   Updated: 2024/11/14 20:44:07 by melkhatr         ###   ########.fr       */
+/*   Updated: 2024/11/17 11:39:43 by melkhatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,8 @@ char	*get_next_line(int fd)
 	}
 	line = buffer_fill(fd, left_c, buffer);
 	free(buffer);
+	if (!line)
+		return (NULL);
 	left_c = sline(line);
 	return (line);
 }

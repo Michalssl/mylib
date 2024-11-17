@@ -6,7 +6,7 @@
 /*   By: melkhatr <melkhatr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 10:42:24 by melkhatr          #+#    #+#             */
-/*   Updated: 2024/11/14 17:02:50 by melkhatr         ###   ########.fr       */
+/*   Updated: 2024/11/17 10:57:13 by melkhatr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,3 +91,39 @@ char	*get_next_line(int fd)
 	left_c[fd] = sline(line);
 	return (line);
 }
+// #include <stdio.h>
+
+// char *get_next_line(int fd);
+
+// int main(void)
+// {
+//     int fd1, fd2;
+//     char *line1;
+//     char *line2;
+//     fd1 = open("file1.txt", O_RDONLY);
+//     if (fd1 < 0)
+//     {
+//         return 1;
+//     }
+//     fd2 = open("file2.txt", O_RDONLY);
+//     if (fd2 < 0)
+//     {
+//         return 1;
+//     }
+//     while ((line1 = get_next_line(fd1)) != NULL || (line2 = get_next_line(fd2)) != NULL)
+//     {
+//         if (line1)
+//         {
+//             printf("File1: %s", line1);
+//             free(line1);
+//         }
+//         if (line2)
+//         {
+//             printf("File2: %s", line2);
+//             free(line2);
+//         }
+//     }
+//     close(fd1);
+//     close(fd2);
+//     return 0;
+// }
